@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript"></script>
+</head>
+
+<body onload="Player()">
+	<script>
+
+		function Player()
+		{
+			xhr = new XMLHttpRequest();
+			xhr.onreadystatechange = play_video;
+			xhr.open("GET","http://localhost/Video/playvideo.php",true); //calls PlayVideo.php which will read the contents of the matched id in the file writeVideoLink.txt
+			xhr.send();
+		}
+
+		function play_video()
+		{
+			if(xhr.readyState == 4 && xhr.status == 200)
+			{
+				v=document.createElement("video");
+				v.width="250";
+				v.height="250";
+				v.src=xhr.responseText;
+				v.type="video/mp4";
+				v.controls="true";
+				document.body.appendChild(v); //v has the source path to play the video
+	
+			}
+		}
+	</script>
+</body>
+</html>

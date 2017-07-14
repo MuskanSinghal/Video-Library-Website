@@ -1,0 +1,4 @@
+card0;http://localhost/Video/streaming/movie.mp4
+card1;http://localhost/Video/streaming/big_buck.mp4
+card2;http://localhost/Video/streaming/movie.mp4
+card3;http://localhost/Video/streaming/movie.mp4
